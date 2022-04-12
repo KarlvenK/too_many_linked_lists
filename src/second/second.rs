@@ -105,7 +105,6 @@ impl<T> Drop for List<T> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::ops::Deref;
     #[test]
     fn basics() {
         let mut list = List::new();
