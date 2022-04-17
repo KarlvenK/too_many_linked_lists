@@ -172,12 +172,6 @@ mod tests {
         assert_eq!(list.pop(), Some(6));
         assert_eq!(list.pop(), Some(7));
         assert_eq!(list.pop(), None);
-
-        struct T {
-            val: i32,
-        }
-
-        let p = Box::into_raw(Box::new(T { val: 1 }));
     }
 
     #[test]
