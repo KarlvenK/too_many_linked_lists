@@ -120,6 +120,12 @@ impl<'a, T> Iterator for Iter<'a, T> {
     }
 }
 
+impl<T> Drop for List<T> {
+    fn drop(&mut self) {
+        while let Some(_) = self.pop() {}
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
